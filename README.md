@@ -1,7 +1,9 @@
 # LabM — Marketing Science & Data Engineering Portfolio
 
 Two self-contained labs that demonstrate end-to-end data work: a **causal
-marketing-mix model** and (planned) a **big-data engineering pipeline**.
+marketing-mix model** and a **big-data engineering pipeline**.
+
+> **🚀 Live demo:** an interactive multi-page Streamlit app shows both labs side by side, with sliders on the MMM allocator. URL is added here once Streamlit Community Cloud finishes the first deploy.
 
 | Lab | Question it answers | Status |
 |-----|--------------------|--------|
@@ -180,6 +182,21 @@ brew install openjdk@17        # PySpark needs a JDK
 
 .venv/bin/python 02_scale_lab/01_download.py all  # full day (~196M rows, ~12 GB)
 ```
+
+### Portfolio app (locally)
+
+```bash
+.venv/bin/streamlit run portfolio_app.py
+```
+
+A 3-page Streamlit app:
+- **Home** — overview of both labs and key results.
+- **MMM Allocator** — interactive budget reallocation with credible intervals.
+- **Scale Lab** — results, ROC curve and engineering notes from the 196M-row run.
+
+For online deployment via [Streamlit Community Cloud](https://share.streamlit.io)
+the build uses the slimmer `requirements-app.txt` (no PyMC / PySpark, since
+the deployed app only reads precomputed posterior samples and PNG figures).
 
 ## Tests
 
