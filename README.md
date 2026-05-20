@@ -3,7 +3,7 @@
 Two self-contained labs that demonstrate end-to-end data work: a **causal
 marketing-mix model** and a **big-data engineering pipeline**.
 
-> **🚀 Live demo:** an interactive multi-page Streamlit app shows both labs side by side, with sliders on the MMM allocator. URL is added here once Streamlit Community Cloud finishes the first deploy.
+> **🚀 Live demo:** **[labm-app.streamlit.app](https://labm-app.streamlit.app)** — interactive multi-page Streamlit app showing both labs side by side, with sliders on the MMM allocator. No install required.
 
 | Lab | Question it answers | Status |
 |-----|--------------------|--------|
