@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Scale Lab: dades del Criteo i derivades (massa grans + CC-BY-NC-SA)
+# Es regeneren executant els scripts; el README explica com.
+02_scale_lab/data/
+02_scale_lab/features/
+02_scale_lab/features_train/
+02_scale_lab/features_test/
+02_scale_lab/model/
+
+# Spark — artefactes locals
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# Logs i temporals
+*.log
+*.tmp

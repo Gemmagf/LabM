@@ -1,0 +1,15 @@
+pandas==3.0.3
+requests==2.34.2
+matplotlib==3.10.9
+statsmodels==0.14.6
+pymc==6.0.0
+arviz==1.1.0
+scipy==1.17.1
+streamlit==1.57.0
+pytest==9.0.3
+
+# Scale Lab (Criteo / PySpark) — requereix Java 17+
+pyspark==4.1.1
+huggingface_hub==1.15.0
+hf_xet==1.5.0
+pyarrow==24.0.0
