@@ -1,7 +1,0 @@
-# Minimal dependencies for the deployed Streamlit portfolio app.
-# (No PyMC / PySpark / etc — those are only used by the offline pipeline
-# scripts in 01_mmm_lab/ and 02_scale_lab/.)
-streamlit==1.57.0
-pandas==3.0.3
-numpy>=2.0
-matplotlib==3.10.9

@@ -153,9 +153,12 @@ no cluster.
 ```bash
 # from the LabM/ directory
 python3 -m venv .venv
-.venv/bin/pip install -r requirements.txt
 
-# run the MMM pipeline in order
+# choose what to install:
+.venv/bin/pip install -r requirements.txt        # slim: just the deployed Streamlit app
+.venv/bin/pip install -r requirements-dev.txt    # full: pipeline scripts + tests + app
+
+# run the MMM pipeline in order  (requires requirements-dev.txt)
 .venv/bin/python 01_mmm_lab/01_download.py
 .venv/bin/python 01_mmm_lab/02_explorar.py
 .venv/bin/python 01_mmm_lab/03_baseline.py
@@ -195,8 +198,10 @@ A 3-page Streamlit app:
 - **Scale Lab** — results, ROC curve and engineering notes from the 196M-row run.
 
 For online deployment via [Streamlit Community Cloud](https://share.streamlit.io)
-the build uses the slimmer `requirements-app.txt` (no PyMC / PySpark, since
-the deployed app only reads precomputed posterior samples and PNG figures).
+the build uses `requirements.txt` (auto-detected, slim — no PyMC / PySpark)
+plus `runtime.txt` (pins Python 3.11). The deployed app reads precomputed
+posterior samples and PNG figures, so the heavy training-time dependencies
+are not needed at runtime.
 
 ## Tests
 
